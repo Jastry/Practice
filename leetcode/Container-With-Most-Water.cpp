@@ -11,13 +11,11 @@
 *
 *
 **********************************************************************************/
-/*
- * 解题思路 ： https://github.com/Jastry/Practice/tree/master/%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF/water 
- * 中的八张图片，一个一个看
- */
+/* 图解 ： */
 
 #include <iostream>
 #include <vector>
+
 
 class Solution {
 public:
