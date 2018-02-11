@@ -12,7 +12,6 @@ struct ListNode {
 	ListNode * next;
 	ListNode(int x) : val(x), next(NULL){}
 };
-
 class Solution {
 public:
 	ListNode* removeNthFromEnd(ListNode* head, int n) {
@@ -26,15 +25,16 @@ public:
 		
 		ListNode * fast = head;
 		ListNode * slow = head;
-		for (int i = 0; i < n && (fast != NULL); ++i) {
+		for (int i = 0; i < n; ++i) {
+            if (fast == NULL)
+                return NULL;
 			fast = fast->next;
 		}
-		if (fast == NULL)
-			return slow;
-		while (fast) {
-			slow = slow->next;
-			fast = fast->next;
-		}
+		while (fast->next != NULL) {
+            fast = fast->next;
+            slow = slow->next;
+        }
+		
 		slow->next = slow->next->next;
 		return head->next;
 	}
