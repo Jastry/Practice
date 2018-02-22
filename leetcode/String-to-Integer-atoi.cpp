@@ -1,4 +1,4 @@
-class Solution {
+
 public:
 	int myAtoi(std::string str) {
 		if (str.empty())
