@@ -25,8 +25,8 @@ private:
             return false;
         }
 
-        int h = left_high > right_high ? left_high : right_high; 
-        if ( abs( h ) > 1 )
+        high = left_high > right_high ? left_high : right_high; 
+        if ( abs( left_high - right_high ) > 1 )
             return false;
         return true;
     }
